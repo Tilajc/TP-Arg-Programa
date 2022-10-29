@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,9 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class PortfolioService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private router:Router) { }
 
-  obtenerDatos():Observable<any>{
-    return this.http.get('./assets/data/data.json');
-  }
+  ngOnInit():void{  }
 }

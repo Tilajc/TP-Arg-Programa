@@ -7,7 +7,8 @@
                 <li class="navbar__menu--option"><a href="https://facebook.com/JCT21/"><img src="assets/Imagenes/FacebookLogo.webp" alt="Facebook Logo"></a></li>
                 <li class="navbar__menu--option"><a href="https://instagram.com/juancruztilatti/"><img src="assets/Imagenes/LogoInstagram.webp" alt="InstagramL ogo"></a></li>
                 <li class="navbar__menu--option"><a href="https://twitter.com/tilajc"><img src="assets/Imagenes/LogoTwitter.png" alt="Twitter Logo"></a></li>
-                <li class="navbar__menu--option"><a href="login.html" id="login"><button id="login">Login</button></a></li>
+                <li class="navbar__menu--option"><button type="button" class="login--button" (click)="login()" *ngIf="!isLogged">Login</button></li>
+                <li class="navbar__menu--option"><button type="button" class="login--button" (click)="onLogOut()" *ngIf="isLogged">Log Out</button></li>
             </ul>
         </nav>
     </header>
