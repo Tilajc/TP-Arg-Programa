@@ -194,6 +194,9 @@ footer {
   border: none;
 }
 
+.newButton--container{
+  margin: 10px;
+}
 
 .newButton {
   display: block;
