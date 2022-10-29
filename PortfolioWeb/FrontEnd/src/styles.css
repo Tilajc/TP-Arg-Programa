@@ -1,105 +1,110 @@
 * {
   box-sizing: border-box;
-  padding:0;
+  padding: 0;
   margin: 0;
 }
 
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 
-body{
+body {
   min-width: 100%;
-  min-height: 100%;    
+  min-height: 100%;
 }
 
-header{
-  background-color: rgb(94, 0, 123);
+header {
+  display: flex;
+  background-color: rgb(36, 62, 109);
   color: rgb(255, 255, 255);
   height: 4em;
   width: 100%;
 }
 
-
-p{
-  font-size: 24px;
-  margin: 10px;
-}
-
-img{
-  width: 3em;
-  border-style: none;
-  max-width: 100%;
-}
-
-h2{
-  background-color: rgb(36, 62, 109);
-  color: rgb(255, 255, 255);
-  display: inline-block;
-  padding: 9px 7px;
-  border-radius: 15px;
-  margin: 15px;
-}
-
-
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-around;
-
+  align-items: center;
 }
 
-.navbar a{
-  margin-top: -27px;
-}
-
-.navbar__menu{
+.navbar__menu {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   margin-top: -27px;
 }
 
 
-.navbar__menu--option{
+.navbar__menu--option {
   padding: 0% 10px;
-  margin-top: 5px;
+  margin-top: 40px;
   list-style: none;
 }
 
 
-.login--button{
+
+.login--button {
   background-color: rgb(255, 255, 255);
-  border-radius: 5%;
   font-size: 27px;
-  margin-top: 10px;
   border-style: none;
+  border-radius: 3px;
+  cursor: pointer;
   width: 100px;
 }
 
-.logoAP{
-  margin-top: -30px;
+.ArgentinaPrograma {
+  width: 80%;
+  height: 100px;
+}
+
+.logoAP {
+  margin: -30px;
+  margin-left: -10px;
   width: 12em;
 }
 
 
-#yoprogramo{
-  margin-top: 15px;
-  margin-right: 65%;
-  font-size: 30px;
+.yoprogramo {
+  margin-left: 25px;
+  font-size: 23px;
+  display: inline;
 }
 
 
+p {
+  font-size: 24px;
+  margin: 10px;
+}
 
-.banner{
-  background-image: url(https://img.freepik.com/vector-premium/fondo-banner-seguridad-informatica-horizontal-estilo-plano_96318-5752.jpg?w=1800); 
+img {
+  width: 3em;
+  border-style: none;
+  max-width: 100%;
+}
+
+h2 {
+  background-color: rgb(36, 62, 109);
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  padding: 9px 7px;
+  border-radius: 15px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 13px;
+}
+
+
+.banner {
+  background-image: url(https://img.freepik.com/vector-premium/fondo-banner-seguridad-informatica-horizontal-estilo-plano_96318-5752.jpg?w=1800);
   background-repeat: no-repeat;
   border-radius: 0 0 120px 0;
   background-size: cover;
 }
 
-#fotoperfil{
+#fotoperfil {
   border-radius: 50%;
   min-width: 12em;
   position: relative;
@@ -112,67 +117,57 @@ h2{
   padding: 12px;
 }
 
-.sobremi--datos{
+.sobremi--datos {
   margin: 4px;
   font-size: 30px;
 }
 
-.sobremi--datos span{
-  color: rgb(27, 110, 170);
-}
-
-.apartado{
-  margin-left: 25px;
+.apartado {
+  width: 97%;
+  margin-left: 20px;
   padding: 20px;
   background-color: rgb(172, 172, 172);
   border-radius: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 
-.grid__container--educacion{
-  display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
-  padding-top: 2em;
-}
 
-
-#logoUTN{
+#logoUTN {
   margin-left: 65px;
   border-radius: 50%;
 }
 
 
-
-.hard:hover{
+.hard:hover {
   background-color: rgb(15, 60, 93);
   color: white;
   transition: 0.5s;
 }
 
-.soft:hover{
+.soft:hover {
   background-color: rgb(27, 110, 170);
   color: white;
   transition: 0.55s;
 }
 
-.lang{
+.lang {
   grid-column: span 5;
 }
 
-.lang:hover{
+.lang:hover {
   background-color: rgba(34, 141, 218, 0.674);
   color: white;
   transition: 0.55s;
 }
 
-.iconContainer{
+.iconContainer {
   display: flex;
 }
 
-.icon{
+.icon {
   font-size: 20px;
   color: white;
   text-align: center;
@@ -184,21 +179,42 @@ h2{
   flex-wrap: wrap-reverse;
 }
 
-.icon:hover{
+.icon:hover {
   background-color: rgba(34, 141, 218, 0.674);
   transition: 0.55s;
 }
 
 
-footer{
+footer {
   padding: 15px;
 }
 
-.modifyButton{
+.modifyButton {
   border-radius: 50%;
   border: none;
 }
 
 
-.newButton{
+.newButton {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-size: 18px;
+  width: 7em;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.titulo{
+  width: 30%;
+}
+
+.informacion{
+  width: 60%;
+}
+
+.tabla{
+  width: 100%;
+  display: flex;
 }

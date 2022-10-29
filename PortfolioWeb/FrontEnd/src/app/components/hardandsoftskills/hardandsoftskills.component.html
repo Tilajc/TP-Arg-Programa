@@ -1,6 +1,8 @@
 <h2>Hard and Soft Skills</h2>
+<div class="newButton--container"> <button class="newButton" type="button" routerLink="/nuevaSkill" *ngIf="isLogged">Nueva
+    Skill</button>
+</div>
 <div class="apartado">
-  <button class="newButton" type="button" routerLink="/nuevaSkill" *ngIf="isLogged">Nueva Skill</button>
   <div *ngFor="let skill of skill">
     <circle-progress [percent]="(skill.porcentaje)" [title]="(skill.nombre)" [outerStrokeColor]="'rgb(15, 60, 93)'"
       [animation]="true">
