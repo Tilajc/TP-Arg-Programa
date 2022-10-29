@@ -7,6 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class HyS {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -44,6 +45,5 @@ public class HyS {
     public void setPorcentaje(int porcentaje) {
         this.porcentaje = porcentaje;
     }
-    
-    
+
 }

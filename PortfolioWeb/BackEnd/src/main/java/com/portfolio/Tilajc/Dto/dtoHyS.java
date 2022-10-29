@@ -3,6 +3,7 @@ package com.portfolio.Tilajc.Dto;
 import javax.validation.constraints.NotBlank;
 
 public class dtoHyS {
+
     @NotBlank
     private String nombre;
     @NotBlank
@@ -31,6 +32,5 @@ public class dtoHyS {
     public void setPorcentaje(int porcentaje) {
         this.porcentaje = porcentaje;
     }
-    
-    
+
 }

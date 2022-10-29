@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.portfolio.Tilajc.Controller;
 
 import com.portfolio.Tilajc.Dto.dtoEducacion;
@@ -32,7 +28,7 @@ public class CEducacion {
     SEducacion sEducacion;
 
     @GetMapping("/lista")
-    public ResponseEntity<List<Educacion>> List() {
+    public ResponseEntity<List<Educacion>> list() {
         List<Educacion> list = sEducacion.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
@@ -57,7 +53,6 @@ public class CEducacion {
     }
 
     @PostMapping("/create")
-    @SuppressWarnings("empty-statement")
     public ResponseEntity<?> create(@RequestBody dtoEducacion dtoeducacion) {
         if (StringUtils.isBlank(dtoeducacion.getNombreE())) {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
@@ -66,8 +61,9 @@ public class CEducacion {
             return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
 
-        Educacion educacion = new Educacion(dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE());
-
+        Educacion educacion = new Educacion(
+                dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE()
+        );
         sEducacion.save(educacion);
         return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
 
@@ -84,7 +80,9 @@ public class CEducacion {
         if (StringUtils.isBlank(dtoeducacion.getNombreE())) {
             return new ResponseEntity(new Mensaje("El campo no puede estar vacio"), HttpStatus.BAD_REQUEST);
         }
+
         Educacion educacion = sEducacion.getOne(id).get();
+
         educacion.setNombreE(dtoeducacion.getNombreE());
         educacion.setDescripcionE(dtoeducacion.getDescripcionE());
 

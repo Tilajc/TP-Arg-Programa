@@ -221,3 +221,11 @@ footer {
   width: 100%;
   display: flex;
 }
+
+
+
+.te-erre{ 
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}

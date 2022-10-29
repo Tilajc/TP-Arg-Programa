@@ -15,13 +15,13 @@ public class Persona {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
-    @Size(min = 1,max = 50, message= "Debe tener una longitud entre 1-50 caracteres")
-    private String nombre;    
+    @Size(min = 1, max = 50, message = "Debe tener una longitud entre 1-50 caracteres")
+    private String nombre;
     @NotNull
-    @Size(min = 1,max = 30, message= "Debe tener una longitud entre 1-30 caracteres")
+    @Size(min = 1, max = 30, message = "Debe tener una longitud entre 1-30 caracteres")
     private String apellido;
     @NotNull
-    @Size(min = 1,max = 50, message= "Debe tener una longitud entre 1-50 caracteres")
+    @Size(min = 1, max = 50, message = "Debe tener una longitud entre 1-50 caracteres")
     private String img;
 
     public Long getId() {
@@ -55,5 +55,5 @@ public class Persona {
     public void setImg(String img) {
         this.img = img;
     }
-    
+
 }
