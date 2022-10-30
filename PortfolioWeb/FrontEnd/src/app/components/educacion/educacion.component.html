@@ -1,5 +1,5 @@
 <h2>Educación</h2>
-<div><button type="button"  class="newButton" routerLink="/nuevaEdu" *ngIf="isLogged">Nueva Educación</button>
+<div><button type="button" class="newButton" routerLink="/nuevaEdu" *ngIf="isLogged">Nueva Educación</button>
 </div>
 <div class="apartado">
 
@@ -7,10 +7,16 @@
 
         <body>
             <tr class="te-erre" *ngFor="let Educacion of educacion">
-                <td>
-                    <h3>{{Educacion.nombreE}}</h3>
-                </td>
-                <td>{{Educacion.descripcionE}}</td>
+                <div class="titulo">
+                    <td>
+                        <h3>{{Educacion.nombreE}}</h3>
+                    </td>
+                </div>
+                <div class="informacion">
+                    <td>
+                        <p> {{Educacion.descripcionE}}</p>
+                    </td>
+                </div>
                 <div class="iconConteiner">
                     <td *ngIf="isLogged"><button type="button" class="modifyButton"><i class="fa-solid fa-pen icon"
                                 routerLink="/editEdu/{{Educacion.id}}"></i></button></td>

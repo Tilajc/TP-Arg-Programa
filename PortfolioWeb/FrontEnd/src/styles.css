@@ -75,7 +75,7 @@ header {
 
 
 p {
-  font-size: 24px;
+  font-size: 18px;
   margin: 10px;
 }
 
@@ -94,6 +94,10 @@ h2 {
   margin-top: 8px;
   margin-bottom: 8px;
   margin-left: 13px;
+}
+
+h3{
+  font-size: 20px;
 }
 
 
@@ -172,6 +176,7 @@ h2 {
   color: white;
   text-align: center;
   height: 40px;
+  min-height: 40px;
   min-width: 40px;
   padding: 10px;
   background-color: rgb(52, 49, 49);
@@ -192,6 +197,7 @@ footer {
 .modifyButton {
   border-radius: 50%;
   border: none;
+  max-height: 40px;
 }
 
 .newButton--container{
@@ -207,15 +213,13 @@ footer {
   border-radius: 7px;
   cursor: pointer;
   transition: all .5s ease;
+  background-color: rgb(27, 110, 170);
+  color: white;
+  border-color: rgb(82, 77, 77);
 }
 
-.titulo{
-  width: 30%;
-}
 
-.informacion{
-  width: 60%;
-}
+
 
 .tabla{
   width: 100%;
@@ -228,4 +232,19 @@ footer {
   width:100%;
   display: flex;
   justify-content: space-between;
+}
+
+.titulo{
+  width: 25%;
+  font-size: 20px;
+  margin-top: 6px;
+}
+
+.informacion{
+  width: 65%;
+  font-size: 15;
+}
+
+.proye{
+  width: 90%;
 }

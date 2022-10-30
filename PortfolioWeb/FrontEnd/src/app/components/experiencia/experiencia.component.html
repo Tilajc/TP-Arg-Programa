@@ -8,10 +8,16 @@
 
         <body>
             <tr class="te-erre" *ngFor="let Experiencia of expe">
-                <td>
-                    <h3>{{Experiencia.nombreE}}</h3>
-                </td>
-                <td>{{Experiencia.descripcionE}}</td>
+                <div class="titulo">
+                    <td>
+                        <h3>{{Experiencia.nombreE}}</h3>
+                    </td>
+                </div>
+                <div class="informacion">
+                    <td>
+                        <p> {{Experiencia.descripcionE}}</p>
+                    </td>
+                </div>
                 <div class="iconConteiner">
                     <td *ngIf="isLogged"><button type="button" class="modifyButton"><i class="fa-solid fa-pen icon"
                                 routerLink="/editExp/{{Experiencia.id}}"></i></button></td>
