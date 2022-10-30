@@ -8,7 +8,8 @@ import { Skills } from '../models/skills';
   providedIn: 'root'
 })
 export class SkillService {
-  URL = environment.URL + 'skill/'
+  //URL = environment.URL + 'skill/';
+  URL = 'https://backendtilajc.herokuapp.com/skill/';
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Skills[]>{

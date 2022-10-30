@@ -8,7 +8,8 @@ import { persona } from '../models/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = environment.URL + 'personas/';
+  //URL = environment.URL + 'personas/';
+  URL = 'https://backendtilajc.herokuapp.com/personas/';
   constructor(private http: HttpClient) { }
 
   public getPersona(): Observable<persona> {

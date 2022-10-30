@@ -1,13 +1,27 @@
 <h2>Proyectos</h2>
+<div><button class="newButton" type="button" routerLink="/nuevoProyecto" *ngIf="isLogged">Nuevo proyecto</button>
+</div>
 <div class="apartado">
-  <div class="proye">
-  <h3>Desarrollo de portfolio web</h3>
-  <p>Realizado: 31/10/2022</p>
-  <p>Desarrolle una aplicación web, la cual es un portfolio de mi curriculum vitae para realizar una busqueda laboral al
-    finalizar el curso argentina programa.</p>
-  </div>
-  <div class="iconContainer">
-    <button type="button" class="modifyButton"><i class="fa-solid fa-pen icon"></i></button>
-    <button type="button" class="modifyButton"><i class="fa-solid fa-xmark icon"></i></button>
-  </div>
+    <table class="tabla">
+        <body>
+            <tr class="te-erre" *ngFor="let Proyecto of proyectos">
+                <div class="titulo">
+                    <td>
+                        <h3>{{Proyecto.nombreP}}</h3>
+                    </td>
+                </div>
+                <div class="informacion">
+                    <td>
+                        <p> {{Proyecto.descripcionP}}</p>
+                    </td>
+                </div>
+                <div class="iconConteiner">
+                    <td *ngIf="isLogged"><button type="button" class="modifyButton"><i class="fa-solid fa-pen icon"
+                                routerLink="/editProyecto/{{Proyecto.id}}"></i></button></td>
+                    <td *ngIf="isLogged"><button type="button" class="modifyButton"><i class="fa-solid fa-xmark icon"
+                                (click)="delete(Proyecto.id)"></i></button></td>
+                </div>
+            </tr>
+        </body>
+    </table>
 </div>

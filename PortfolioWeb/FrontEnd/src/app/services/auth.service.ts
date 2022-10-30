@@ -10,8 +10,8 @@ import { NuevoUsuario } from '../models/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  URL = environment.URL + 'auth/'
-
+  //URL = environment.URL + 'auth/'
+  URL = 'https://backendtilajc.herokuapp.com/auth/';
   constructor(private httpClient: HttpClient) {  }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {
