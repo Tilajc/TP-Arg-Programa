@@ -9,7 +9,7 @@ import { Proyectos } from '../models/proyectos';
 })
 export class ProyectosService {
   //URL = environment.URL + 'proyectos/';
-  URL = 'https://backendtilajc.herokuapp.com/personas/';
+  URL = 'https://backendtilajc.herokuapp.com/proyectos/';
 
 
   constructor(private httpClient: HttpClient) { }
