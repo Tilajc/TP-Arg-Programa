@@ -9,8 +9,8 @@ import { ProyectosService } from 'src/app/services/proyectos.service';
   styleUrls: ['./new-proyecto.component.css']
 })
 export class NewProyectoComponent implements OnInit {
-  nombreP: string = '';
-  descripcionP: string = '';
+  nombreP: string;
+  descripcionP: string;
   constructor(private sProyecto: ProyectosService, private router: Router) { }
 
   ngOnInit(): void {
